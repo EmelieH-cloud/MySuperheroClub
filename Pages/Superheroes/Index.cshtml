@@ -1,0 +1,15 @@
+﻿@page
+@model MySuperheroRazorApp.Pages.Superheroes.IndexModel
+@{
+}
+
+@foreach (var hero in Model.Superheroes)
+{
+    <div class="border border-primary">
+        <h1>Name: @hero.Name</h1>
+        <p>Alias: @hero.Alias</p>
+        <p>Age: @hero.Age</p>
+        <p>Superpower: @hero.Power</p>
+        <a asp-page="/Superheroes/Update" asp-route-name="@hero.Name">Read more</a>
+    </div>
+}
